@@ -9,7 +9,7 @@ const app = express();
 app.use(
   cors({
     origin: ["http://localhost:5173", "http://localhost:4173"],
-  })
+  }),
 );
 
 app.use(express.json());
@@ -21,5 +21,4 @@ const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, async () => {
   await mongoose.connect(process.env.MONGODB_URI);
-  console.log("Connected to db");
 });
