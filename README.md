@@ -4,7 +4,7 @@ Test task for Keenethics internship
 This is a simple client-server REST-api based application for performing CRUD opeartions on database with bikes 
 
 Tech stack: 
-+ Node.jsx
++ Node.js
 + Express
 + React
 + Redux
