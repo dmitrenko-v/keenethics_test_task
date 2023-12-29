@@ -22,7 +22,7 @@ npm run dev
 ```
 Then, open another terminal in project directory and run: 
 ```
-cd ../client
+cd client
 npm install
 npm run dev
 ```
