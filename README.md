@@ -23,4 +23,4 @@ cd ../client
 npm install
 npm run dev
 ```
-Then, follow http://localhost:5173/ and there you can use this application
+Then, follow http://localhost:5173/ and then you can use this application
