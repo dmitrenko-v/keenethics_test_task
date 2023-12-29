@@ -10,10 +10,10 @@ function validateBike(bikeData) {
   } = bikeData;
   const stringFields = [id, name, type, color, description];
   const numberFields = [price, wheelSize];
-
   return (
-    stringFields.every((prop) => typeof prop === "string" && prop.length >= 5 && Number.isNaN(prop))
-    && numberFields.every((prop) => typeof prop === "number")
+    stringFields.every(
+      (prop) => typeof prop === "string" && prop.length >= 5,
+    ) && numberFields.every((prop) => typeof prop === "number")
   );
 }
 

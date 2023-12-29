@@ -12,6 +12,7 @@ class BikesService {
   }
 
   async createBike(bikeData) {
+    bikeData.price = Number(bikeData.price.toFixed(2));
     const newBike = new Bike(bikeData);
     await newBike.save();
   }
@@ -25,6 +26,27 @@ class BikesService {
 
   async deleteBike(id) {
     await Bike.deleteOne({ id }).exec();
+  }
+
+  async getBikesStats() {
+    const bikes = await Bike.find().exec();
+    const bikeCount = bikes.length;
+    const availableBikes = bikes.filter(
+      (bike) => bike.status === "available",
+    ).length;
+    const bookedBikes = bikes.filter((bike) => bike.status === "busy").length;
+    const avgBikeCost = Number(
+      (
+        bikes.reduce((sum, currBike) => sum + currBike.price, 0) / bikeCount
+      ).toFixed(2),
+    );
+    const bikeStats = {
+      bikeCount,
+      availableBikes,
+      bookedBikes,
+      avgBikeCost,
+    };
+    return bikeStats;
   }
 }
 

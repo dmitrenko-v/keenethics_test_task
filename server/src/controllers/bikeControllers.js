@@ -5,8 +5,16 @@ class BikeController {
   async getBikes(req, res) {
     try {
       const bikes = await bikesService.getBikes();
-
       return res.status(200).json(bikes);
+    } catch (err) {
+      return res.status(500).json({ error: true, message: err.message });
+    }
+  }
+
+  async getBikesStats(req, res) {
+    try {
+      const bikeStats = await bikesService.getBikesStats();
+      return res.status(200).json(bikeStats);
     } catch (err) {
       return res.status(500).json({ error: true, message: err.message });
     }

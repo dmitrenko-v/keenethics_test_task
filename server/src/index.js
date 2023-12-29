@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/v1/bikes", router);
 
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 
 app.listen(PORT, async () => {
   await mongoose.connect(process.env.MONGODB_URI);
