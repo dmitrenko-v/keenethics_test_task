@@ -19,6 +19,9 @@ To run project in dev mode, firstly you need to set your db URI in /server/.env 
 cd server
 npm install
 npm run dev
+```
+Then, open another terminal in project directory and run: 
+```
 cd ../client
 npm install
 npm run dev
