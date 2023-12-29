@@ -1,0 +1,258 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root {
+  width: 1152px;
+  height: 700px;
+  font-family: "Saira", sans-serif;
+}
+
+.header {
+  background-color: #696969;
+  padding: 4px 16px;
+  gap: 10px;
+  height: 42px;
+}
+
+.header__sitename {
+  font-family: "Saira Stencil One", sans-serif;
+  font-size: 24px;
+  color: #e8e8e8;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  border-right: 1px solid #c4c4c4;
+}
+
+.bikes {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  border-right: 1px solid #c4c4c4;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.available {
+  border: 2px solid #6fcf97;
+}
+
+.busy {
+  border: 2px solid #f2994a;
+}
+
+.unavailable {
+  border: 2px solid #eb5757;
+}
+
+.bikes__bike {
+  width: 618px;
+  height: 83px;
+  background-color: #e8e8e8;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 10px 10px;
+  position: relative;
+}
+
+.bike__name {
+  font-weight: 700;
+}
+
+.bike__id {
+  font-size: 8px;
+  color: #717171;
+}
+
+.bike__price {
+  position: absolute;
+  font-size: 24px;
+  right: 0px;
+  bottom: 5px;
+  width: 163px;
+}
+
+.bike__status_info {
+  display: flex;
+  align-items: center;
+}
+
+.bike__delete {
+  position: absolute;
+  right: 10px;
+}
+
+select {
+  background: none;
+  border: none;
+  padding-left: 20px;
+}
+
+.bike__delete:hover,
+select:hover,
+input[type="submit"]:hover,
+button:hover {
+  cursor: pointer;
+}
+
+form {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  border-bottom: 1px solid #c4c4c4;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  width: 100%;
+}
+
+.flex-group {
+  display: flex;
+  justify-content: center;
+  gap: 11px;
+}
+
+.form__description-field,
+button,
+input {
+  background-color: #e8e8e8;
+  width: 100%;
+  height: 29px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 16px;
+}
+
+input::placeholder {
+  font-size: 12px;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.form__description-field {
+  width: 100%;
+  height: 75px;
+  resize: none;
+}
+
+.form__description-field::placeholder {
+  font-size: 12px;
+}
+
+.form__buttons {
+  display: flex;
+  gap: 11px;
+}
+
+button,
+input[type="submit"] {
+  height: 24px;
+  padding-top: 1px;
+  font-size: 14px;
+  text-align: center;
+  background-color: #696969;
+  color: #ffffff;
+}
+
+button {
+  padding-bottom: 4px;
+  padding-top: 0px;
+  width: 100%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.error-message {
+  color: red;
+}
+
+.error-field {
+  border: 1px solid red;
+}
+
+.stats {
+  padding: 10px;
+}
+
+.stats__header {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.stats__list {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  padding-bottom: 10px;
+}
+
+.footer {
+  padding: 10px;
+  gap: 10px;
+  background-color: #696969;
+  height: 42px;
+}
+
+.footer__info {
+  text-align: right;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.footer__developer {
+  color: #cbcaca;
+}
